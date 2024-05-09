@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Assets/game-control.ico" />
+    <script
+      src="https://kit.fontawesome.com/4f2e7ba834.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Passive Pursuit: Unveiling English Mastery</title>
+  </head>
+  <body>
+    <!-- All Body -->
+    <section class="container">
+      <!-- Score Game -->
+      <section class="scoreGame">
+        <div class="textScore">Score</div>
+        <div class="valueScore" id="scoreValue">0</div>
+      </section>
+      <!-- Level Selector -->
+      <section class="levelSelect">
+        <div class="arrowLeft" id="slideButton">
+          <i class="fa-solid fa-chevron-left" id="switch"></i>
+        </div>
+        <div class="theLevel" id="level">
+          <a href="#levelOne">1</a>
+          <a href="#levelTwo">2</a>
+          <a href="#levelThree">3</a>
+          <a href="#levelFour">4</a>
+          <a href="#levelFive">5</a>
+          <a href="#levelSix">6</a>
+          <a href="#levelSeven">7</a>
+          <a href="#levelEight">8</a>
+          <a href="#levelNine">9</a>
+          <a href="#levelTen">10</a>
+        </div>
+      </section>
+      <!-- About and Submission -->
+      <section class="submissionAbout">
+        <div class="arrowRight" id="slideReverse">
+          <i class="fa-solid fa-chevron-right" id="switchReverse"></i>
+        </div>
+        <div class="aboutSub" id="aboutEnd">
+          <div class="namePlayer" id="myName">Player Name</div>
+          <a class="endSub" id="endScore" href="#endGame">End Game</a>
+        </div>
+      </section>
+      <!-- Main Menu -->
+      <section class="mainMenu" id="menu">
+        <img class="mainBgr" src="Assets/mainBgr.jpg" />
+        <div class="greetingText">
+          <h2>Welcome Player</h2>
+        </div>
+        <div class="nameInput">
+          <form class="inputBox">
+            <input
+              class="username"
+              id="userName"
+              type="text"
+              placeholder="Input Your Name Here!"
+            />
+          </form>
+        </div>
+        <div class="startButton" id="identify">
+          <a href="#levelOne">start</a>
+        </div>
+        <div class="addText">
+          <p>Made By Group II | XI-5</p>
+          <h6>Enjoy The Game! >></h6>
+        </div>
+      </section>
+      <!-- Question Level 1 -->
+      <section class="gameContent" id="levelOne">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accOne"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevelOne">Level 1</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionOne"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansOne"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subOne">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showOne">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 2 -->
+      <section class="gameContent" id="levelTwo">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accTwo"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 2</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionTwo"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansTwo"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subTwo">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showTwo">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 3 -->
+      <section class="gameContent" id="levelThree">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accThree"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 3</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionThree"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansThree"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subThree">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showThree">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 4 -->
+      <section class="gameContent" id="levelFour">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accFour"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 4</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionFour"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansFour"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subFour">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showFour">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 5 -->
+      <section class="gameContent" id="levelFive">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accFive"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 5</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionFive"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansFive"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subFive">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showFive">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 6 -->
+      <section class="gameContent" id="levelSix">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accSix"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 6</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionSix"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansSix"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subSix">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showSix">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 7 -->
+      <section class="gameContent" id="levelSeven">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accSeven"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 7</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionSeven"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansSeven"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subSeven">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showSeven">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 8 -->
+      <section class="gameContent" id="levelEight">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accEight"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 8</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionEight"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansEight"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subEight">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showEight">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 9 -->
+      <section class="gameContent" id="levelNine">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accNine"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 9</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionNine"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansNine"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subNine">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showNine">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Question Level 10 -->
+      <section class="gameContent" id="levelTen">
+        <img class="gameBgr" src="Assets/gameBgr.jpg" />
+        <header class="someText">
+          <h2>Let's Start The Game</h2>
+        </header>
+        <section class="menuGame">
+          <div class="content leftContent">
+            <div class="acc" id="accTen"></div>
+          </div>
+          <div class="content rightContent">
+            <div class="levelText" id="addLevel">Level 10</div>
+            <div class="questionText">
+              <div class="questionBlock" id="hideQuestionTen"></div>
+            </div>
+            <form class="ansText">
+              <label class="insText" for="instruction">
+                <p>Change Into Passive!</p>
+              </label>
+              <input
+                class="inputText"
+                id="ansTen"
+                type="text"
+                placeholder="Write your answer here..."
+              />
+            </form>
+            <button class="submitButton" id="subTen">Submit</button>
+            <div class="buttonGame">
+              <button class="start" id="showTen">Start</button>
+              <a class="menu" href="#menu">Menu</a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- End Game -->
+      <section class="endContent" id="endGame">
+        <img class="endBgr" src="Assets/endGame.jpg" />
+        <header class="congratzGreat">
+          <div class="congratulation" id="greater">Greating!</div>
+          <div class="nameWin" id="winner">Player Name</div>
+        </header>
+        <div class="scorePlayer">
+          <div class="scoreEnd">Your score is</div>
+          <div class="scoreFinal" id="finalScore">0</div>
+        </div>
+        <footer class="thanksGreat">
+          <h6>Thank You :)</h6>
+          <a id="rewardPunish" href="#rewardPage">...</a>
+        </footer>
+      </section>
+      <!-- Reward -->
+      <section class="getReward" id="rewardPage"></section>
+      <!-- Punishment -->
+      <section class="getPunishment" id="punishPage">
+        <div class="titlePunish">Don't Run Away from Your Punishment</div>
+        <div class="songPunish">
+          <a class="songOne" id="punishSong" href="#firstSong">
+            <img src="Assets/hearts.png" class="cardImg" />
+          </a>
+          <a class="songTwo" id="punishSong" href="#secondSong">
+            <img src="Assets/spades.png" class="cardImg" />
+          </a>
+          <a class="songThree" id="punishSong" href="#thirdSong">
+            <img src="Assets/diamonds.png" class="cardImg" />
+          </a>
+          <a class="songFour" id="punishSong" href="#fourthSong">
+            <img src="Assets/clubs.png" class="cardImg" />
+          </a>
+        </div>
+        <div class="textPunish">Choose one of the cards above!</div>
+      </section>
+      <!-- Punishment One -->
+      <section class="punishment" id="firstSong">
+        <div class="punishContent">
+          <h2>You Are My Sunshine</h2>
+          <pre class="songLyrics">
+You are my sunshine, my only sunshine
+You make me happy when skies are grey
+You'll never know dear, how much I love you
+Please don't take my sunshine away
+
+The other night dear, as I lay sleeping
+I dreamed I held you in my arms
+When I awoke, dear, I was mistaken
+And I hung my head and cried
+
+You are my sunshine, my only sunshine
+You make me happy when skies are grey
+You'll never know dear, how much I love you
+Please don't take my sunshine away
+
+I'll always love you and make you happy
+If you will only say the same
+But if you leave me to love another
+You'll regret it all some day
+
+You are my sunshine, my only sunshine
+You make me happy when skies are grey
+You'll never know dear, how much I love you
+Please don't take my sunshine away
+
+You told me once dear, you really loved me
+And no one else dear, could come between
+But now you've left me and love another
+You have shattered all my dreams
+
+You are my sunshine, my only sunshine
+You make me happy when skies are grey
+You'll never know dear, how much I love you
+Please don't take my sunshine away
+          </pre>
+          <div class="songPlayer">
+            <h1 id="playSongOne">Play</h1>
+            <h1 id="pauseSongOne">Pause</h1>
+          </div>
+        </div>
+        <a class="quitPunish" id="quitSongOne" href="#punishPage">
+          <i class="fa-solid fa-x"></i>
+        </a>
+        <audio id="punishAudioOne">
+          <source src="Assets/songOne.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+      <!-- Punishment Two -->
+      <section class="punishment" id="secondSong">
+        <div class="punishContent">
+          <h2>Rewrite The Stars</h2>
+          <pre class="songLyrics">
+You know I want you
+It's not a secret I try to hide
+I know you want me
+So don't keep saying our hands are tied
+
+You claim it's not in the cards
+And fate is pulling you miles away
+And out of reach from me
+But you're here in my heart
+So who can stop me if I decide 
+that you're my destiny?
+
+What if we rewrite the stars?
+Say you were made to be mine
+Nothing could keep us apart
+You'd be the one I was meant to find
+It's up to you, and it's up to me
+No one can say what we get to be
+So why don't we rewrite the stars?
+Maybe the world could be ours, tonight
+
+You think it's easy
+You think I don't want to run to you
+But there are mountains
+And there are doors 
+that we can't walk through
+I know you're wondering why
+Because we're able to be just you and me, 
+within these walls
+But when we go outside
+You're gonna wake up and see 
+that it was hopeless after all
+
+No one can rewrite the stars
+How can you say you'll be mine?
+Everything keeps us apart
+And I'm not the one you were meant to find
+It's not up to you, it's not up to me
+When everyone tells us what we can be
+How can we rewrite the stars?
+Say that the world can be ours, tonight
+
+All I want is to fly with you
+All I want is to fall with you
+So just give me all of you
+It feels impossible (it's not impossible)
+Is it impossible? Say that it's possible
+
+How do we rewrite the stars?
+Say you were made to be mine
+Nothing can keep us apart
+'Cause you are the one I was meant to find
+It's up to you, and it's up to me
+No one can say what we get to be
+Why don't we rewrite the stars?
+Changing the world to be ours
+
+You know I want you
+It's not a secret I try to hide
+But I can't have you
+We're bound to break and my hands are tied
+          </pre>
+          <div class="songPlayer">
+            <h1 id="playSongTwo">Play</h1>
+            <h1 id="pauseSongTwo">Pause</h1>
+          </div>
+        </div>
+        <a class="quitPunish" id="quitSongTwo" href="#punishPage">
+          <i class="fa-solid fa-x"></i>
+        </a>
+        <audio id="punishAudioTwo">
+          <source src="Assets/songTwo.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+      <!-- Punishment Three -->
+      <section class="punishment" id="thirdSong">
+        <div class="punishContent">
+          <h2>Brown Eyes</h2>
+          <pre class="songLyrics">
+Remember the first day when I saw your face?
+Remember the first day when you smiled at me?
+You stepped to me and then you said to me
+I was the woman you dreamed about
+
+Remember the first day when you called my house?
+Remember the first day when you took me out?
+We had butterflies, although we tried to hide
+And we both had a beautiful night
+
+The way we held each other's hand
+The way we talked, the way we laughed
+It felt so good to find true love
+I knew right then and there you were the one,
+ooh
+
+I know that he loves me 'cause he told me so
+I know that he loves me 'cause his feelings show
+When he stares at me, you see he cares for me
+You see how he is so deep in love
+
+I know that he loves me 'cause it's obvious
+I know that he loves me 'cause it's me he trusts
+And he's missing me if he's not kissing me
+And when he looks at me, his brown eyes tell it so
+
+Remember the first day, the first day we kissed?
+Remember the first day we had an argument?
+We apologized and then we compromised
+And we haven't argued since
+
+Remember the first day we stopped playing games?
+Remember the first day you fell in love with me?
+It felt so good for you to say those words
+'Cause I felt the same way too
+
+The way we held each other's hands
+The way we talked, the way we laughed
+It felt so good to fall in love
+And I knew right there and then 
+that you were the one, ooh, oh
+
+I know that he loves me 'cause he told me so
+I know that he loves me 'cause his feelings show
+When he stares at me, you see he cares for me
+You see how he is so deep in love
+
+I know that he loves me 'cause it's obvious
+I know that he loves me 'cause it's me he trusts
+And he's missing me if he's not kissing me
+And when he looks at me, 
+his brown eyes tell it so
+
+I'm so happy, so happy that you're in my life
+And baby, now that you're a part of me
+You've shown me
+Shown me the true meaning of love 
+(the true meaning of love)
+And I know he loves me
+
+I know that he loves me 'cause he told me so
+I know that he loves me 'cause his feelings show
+When he stares at me, you see he cares for me
+You see how he is so deep in love
+
+I know that he loves me 'cause it's obvious
+I know that he loves me 'cause it's me he trusts
+And he's missing me if he's not kissing me
+And when he looks at me, his brown eyes tell it so
+
+He looks at me and his brown eyes tell it so
+          </pre>
+          <div class="songPlayer">
+            <h1 id="playSongThree">Play</h1>
+            <h1 id="pauseSongThree">Pause</h1>
+          </div>
+        </div>
+        <a class="quitPunish" id="quitSongThree" href="#punishPage">
+          <i class="fa-solid fa-x"></i>
+        </a>
+        <audio id="punishAudioThree">
+          <source src="Assets/songThree.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+      <!-- Punishment Four -->
+      <section class="punishment" id="fourthSong">
+        <div class="punishContent">
+          <h2>The Lazy Song</h2>
+          <pre class="songLyrics">
+Today, I don't feel like doing anything
+I just wanna lay in my bed
+Don't feel like picking up my phone
+So leave a message at the tone
+'Cause today, I swear, I'm not doing anything, uh
+
+I'm gonna kick my feet up, then stare at the fan
+Turn the TV on, throw my hand in my pants
+Nobody's gon' tell me I can't, nah
+I'll be lounging on the couch, 
+just chillin' in my Snuggie
+Click to MTV, so they can teach me how to dougie
+'Cause in my castle, I'm the freaking man
+
+Oh-oh, yes, I said it (Ooh-ooh)
+I said it, I said it, 'cause I can 
+(Ooh-ooh-ooh-ooh-ooh-ooh)
+
+Today, I don't feel like doing anything
+I just wanna lay in my bed
+Don't feel like picking up my phone
+So leave a message at the tone
+'Cause today, I swear, I'm not doing anything
+Nothing at all
+Woo-hoo, woo-hoo, ooh
+Nothing at all
+Woo-hoo, woo-hoo, ooh
+
+Tomorrow, I'll wake up, do some P90X
+Meet a really nice girl, have some really nice sex
+And she's gonna scream out, "This is great!" 
+(Oh my God, this is great)
+Yeah, I might mess around and get my college degree
+I bet my old man will be so proud of me
+But sorry, pops, you'll just have to wait
+
+Oh-oh, yes I said it (Ooh-ooh)
+I said it, I said it, 'cause I can 
+(Ooh-ooh-ooh-ooh-ooh)
+
+Today, I don't feel like doing anything
+I just wanna lay in my bed
+Don't feel like picking up my phone
+So leave a message at the tone
+'Cause today, I swear, I'm not doing anything
+
+No, I ain't gonna comb my hair (Ooh-ooh-ooh)
+'Cause I ain't going anywhere (Ooh-ooh-ooh)
+No, no, no, no, no, no, no, no, no
+I'll just strut in my birthday suit (Ooh-ooh-ooh)
+And let everything hang loose (Ooh-ooh-ooh)
+Yeah, yeah, yeah, yeah, yeah, 
+yeah, yeah, yeah, yeah, yeah
+
+Oh, today, I don't feel like doing anything
+I just wanna lay in my bed
+Don't feel like picking up my phone
+So leave a message at the tone
+'Cause today, I swear, I'm not doing anything
+Nothing at all
+Woo-hoo, woo-hoo, ooh
+Nothing at all
+Woo-hoo, woo-hoo, ooh
+Nothing at all
+          </pre>
+          <div class="songPlayer">
+            <h1 id="playSongFour">Play</h1>
+            <h1 id="pauseSongFour">Pause</h1>
+          </div>
+        </div>
+        <a class="quitPunish" id="quitSongFour" href="#punishPage">
+          <i class="fa-solid fa-x"></i>
+        </a>
+        <audio id="punishAudioFour">
+          <source src="Assets/songFour.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

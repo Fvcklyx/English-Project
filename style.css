@@ -1,0 +1,1014 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scoreGame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  left: 0vh;
+  z-index: 10000;
+  margin-bottom: 6vh;
+}
+
+.scoreGame .textScore,
+.scoreGame .valueScore {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 1000;
+  font-size: 30px;
+  cursor: default;
+}
+
+.scoreGame .textScore {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.scoreGame .valueScore {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.levelSelect {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  position: fixed;
+  width: 10%;
+  height: 100%;
+  bottom: 0;
+  right: 0vh;
+  z-index: 5000;
+  margin-right: 0;
+}
+
+.levelSelect .arrowLeft i {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(250, 250, 250);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  font-size: 75px;
+  font-weight: 1000;
+  cursor: pointer;
+  margin: 45vh 2vh 0 0;
+  transition: 0.299s;
+}
+
+.levelSelect .arrowLeft i:hover {
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255),
+    0 0 10px rgb(255, 255, 255);
+}
+
+.levelSelect .theLevel {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 8vh 8vh;
+  grid-template-rows: 8vh 8vh 8vh 8vh 8vh;
+  gap: 2vh;
+  justify-content: right;
+  margin: 26.5vh 1.5vh 0 0;
+  display: none;
+}
+
+.levelSelect .showLevel {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 8vh 8vh;
+  grid-template-rows: 8vh 8vh 8vh 8vh 8vh;
+  gap: 2vh;
+  justify-content: right;
+  margin: 26.5vh 1.5vh 0 0;
+}
+
+.levelSelect .theLevel a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.099s;
+}
+
+.levelSelect .theLevel a:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.submissionAbout {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  position: fixed;
+  width: auto;
+  height: 100%;
+  bottom: 0;
+  left: 0vh;
+  z-index: 5000;
+  margin-left: 0;
+}
+
+.submissionAbout .arrowRight i {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(250, 250, 250);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  font-size: 75px;
+  font-weight: 1000;
+  cursor: pointer;
+  margin: 45vh 0 0 2vh;
+  transition: 0.299s;
+}
+
+.submissionAbout .arrowRight i:hover {
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255),
+    0 0 10px rgb(255, 255, 255);
+}
+
+.submissionAbout .aboutSub {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1.5vh 0 0;
+  display: none;
+}
+
+.submissionAbout .showAboutSub {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1.5vh 0 0;
+}
+
+.submissionAbout .aboutSub .namePlayer,
+.submissionAbout .aboutSub .endSub {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 1000;
+  border: none;
+  padding: 25px 12px 25px 12px;
+  transition: 0.299s;
+}
+
+.submissionAbout .aboutSub .namePlayer {
+  font-size: 24px;
+  border-top-right-radius: 20px;
+  background-color: rgba(223, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  cursor: default;
+}
+
+.submissionAbout .aboutSub .endSub {
+  font-size: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+}
+
+.submissionAbout .aboutSub .namePlayer:hover {
+  background-color: rgba(223, 0, 0, 1);
+  color: gold;
+}
+
+.submissionAbout .aboutSub .endSub:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: gold;
+}
+
+.mainMenu {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  z-index: 20000;
+}
+
+.mainMenu .mainBgr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.799;
+}
+
+.mainMenu .greetingText {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 15vh;
+  z-index: 1;
+}
+
+.mainMenu .greetingText h2 {
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 90px;
+  font-weight: 1500;
+  word-spacing: -20px;
+  letter-spacing: 7px;
+  color: rgb(250, 250, 250);
+  text-shadow: 0 0 10px rgb(24, 20, 240), 0 0 10px rgb(255, 255, 255),
+    0 0 10px rgb(124, 226, 252);
+  cursor: default;
+  animation: lightingOne 2s linear infinite;
+}
+
+.mainMenu .nameInput {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15vh;
+  z-index: 1;
+}
+
+.mainMenu .nameInput .inputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainMenu .nameInput .inputBox .username {
+  width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: rgb(50, 50, 50);
+  text-shadow: 0 0 10px rgb(255, 210, 0), 0 0 10px rgb(255, 255, 255),
+    0 0 10px rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 1000;
+  cursor: default;
+  transition: 0.599s;
+}
+
+.mainMenu .nameInput .inputBox .username::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 26px;
+}
+
+.mainMenu .nameInput .inputBox .username:hover {
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.mainMenu .startButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  z-index: 1;
+}
+
+.mainMenu .startButton a {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 12px 24px;
+  transition: 0.599s;
+}
+
+.mainMenu .startButton a:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(215, 225, 0);
+  color: rgba(0, 0, 0, 1);
+}
+
+.mainMenu .addText {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.mainMenu .addText h6,
+.mainMenu .addText p {
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  font-size: 26px;
+  color: rgb(200, 200, 200);
+  text-shadow: 0 0 20px rgb(200, 255, 255);
+  cursor: default;
+  margin: 0 20px 20px 20px;
+}
+
+.gameContent {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.gameContent .gameBgr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.799;
+}
+
+.gameContent .someText {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 8.599vh;
+  z-index: 1;
+}
+
+.gameContent .someText h2 {
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+  font-weight: 1500;
+  color: rgb(240, 225, 177);
+  text-shadow: 0 0 10px rgb(13, 175, 26), 0 0 10px rgb(252, 255, 50),
+    0 0 10px rgb(225, 90, 0);
+  cursor: default;
+  animation: lightingTwo 2s linear infinite;
+}
+
+.gameContent .menuGame {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.gameContent .menuGame .leftContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 50vh;
+  background: rgba(255, 255, 255, 0.799);
+  border-radius: 20px;
+}
+
+.gameContent .menuGame .rightContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 50vh;
+  background: rgba(255, 255, 255, 0.899);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.gameContent .menuGame .leftContent .acc {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 50px;
+  color: rgb(10, 10, 10);
+  text-shadow: 0 0 50px rgb(255, 225, 0), 0 0 10px rgb(210, 190, 255),
+    0 0 15px rgb(165, 0, 0);
+  margin: 3vh;
+}
+
+.gameContent .menuGame .rightContent .levelText {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 32px;
+  font-weight: 1000;
+  color: rgb(165, 0, 0);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+  background: rgb(215, 225, 0);
+  border-radius: 20px 20px 0 0;
+  cursor: default;
+  padding: 15px;
+}
+
+.gameContent .menuGame .rightContent .questionText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 5px 0;
+}
+
+.gameContent .menuGame .rightContent .questionText .questionBlock {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.gameContent .menuGame .rightContent .ansText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 25px 0 25px;
+}
+
+.gameContent .menuGame .rightContent .ansText .insText {
+  width: 100%;
+  padding: 0 0 10px 0;
+}
+
+.gameContent .menuGame .rightContent .ansText .insText p {
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.gameContent .menuGame .rightContent .ansText .inputText {
+  width: 100%;
+  height: 5vh;
+  padding: 10px;
+  margin-bottom: 7.999px;
+  border-radius: 10px;
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gameContent .menuGame .rightContent .submitButton {
+  width: 20%;
+  height: 5vh;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(129, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.gameContent .menuGame .rightContent .submitButton:hover {
+  background: rgb(140, 255, 125);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.gameContent .menuGame .rightContent .buttonGame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.gameContent .menuGame .rightContent .buttonGame .start {
+  margin-left: 20px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(245, 129, 255);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.gameContent .menuGame .rightContent .buttonGame .start:hover {
+  background: rgb(255, 95, 95);
+}
+
+.gameContent .menuGame .rightContent .buttonGame .menu {
+  margin-right: 20px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(255, 190, 129);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+}
+
+.gameContent .menuGame .rightContent .buttonGame .menu:hover {
+  background: rgb(235, 255, 123);
+}
+
+.endContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 20000;
+}
+
+.endContent .endBgr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.799;
+  z-index: -100;
+}
+
+.endContent .congratzGreat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5vh;
+  z-index: 1;
+}
+
+.endContent .congratzGreat .congratulation,
+.endContent .congratzGreat .nameWin {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 1000;
+  color: rgb(250, 250, 250);
+  cursor: default;
+}
+
+.endContent .congratzGreat .congratulation {
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgb(240, 20, 20), 0 0 10px rgb(255, 255, 255),
+    0 0 10px rgb(228, 255, 110);
+  font-size: 60px;
+  margin-bottom: 10px;
+  cursor: default;
+  animation: lightingThree 2s linear infinite;
+}
+
+.endContent .congratzGreat .nameWin {
+  text-transform: none;
+  text-shadow: 0 0 10px rgb(240, 225, 20), 0 0 10px rgb(255, 255, 255),
+    0 0 10px rgb(255, 110, 243);
+  font-size: 50px;
+  margin-top: 10px;
+  cursor: default;
+  animation: lightingFour 2s linear infinite;
+}
+
+.endContent .scorePlayer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 5vh;
+}
+
+.endContent .scorePlayer .scoreEnd,
+.endContent .scorePlayer .scoreFinal {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  font-weight: 1000;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  cursor: default;
+}
+
+.endContent .scorePlayer .scoreEnd {
+  text-align: right;
+  color: rgb(250, 250, 250);
+  margin-right: 5.5px;
+}
+
+.endContent .scorePlayer .scoreFinal {
+  text-align: left;
+  margin-left: 5.5px;
+}
+
+.endContent .thanksGreat {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3vh;
+  z-index: 1;
+}
+
+.endContent .thanksGreat h6,
+.endContent .thanksGreat a {
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 26px;
+  font-weight: 1000;
+  text-shadow: 0 0 10px rgb(255, 100, 100);
+  color: rgb(250, 250, 250);
+}
+
+.endContent .thanksGreat h6 {
+  margin-left: 3vh;
+  cursor: default;
+}
+
+.endContent .thanksGreat a {
+  margin-right: 3vh;
+  cursor: pointer;
+}
+
+.endContent .thanksGreat a:hover {
+  text-shadow: 0 0 10px rgb(255, 0, 0);
+  transition: 0.299s;
+}
+
+.getPunishment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(100, 100, 100);
+  z-index: 30000;
+}
+
+.getPunishment .titlePunish {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: 9px;
+  color: rgb(255, 255, 255);
+  text-shadow: 5px 5px 5px rgb(19, 19, 19);
+  margin-top: 7vh;
+  cursor: default;
+}
+
+.getPunishment .songPunish {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.getPunishment .songPunish .songOne,
+.getPunishment .songPunish .songTwo,
+.getPunishment .songPunish .songThree,
+.getPunishment .songPunish .songFour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 55vh;
+  background-color: rgb(40, 40, 40);
+  text-decoration: none;
+  box-shadow: 5px 5px 5px rgb(35, 35, 35);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  transform: scale3d(90%, 90%, 90%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.getPunishment .songPunish .songOne {
+  margin-left: 8vh;
+}
+
+.getPunishment .songPunish .songFour {
+  margin-right: 8vh;
+}
+
+.getPunishment .songPunish .songOne .cardImg,
+.getPunishment .songPunish .songTwo .cardImg,
+.getPunishment .songPunish .songThree .cardImg,
+.getPunishment .songPunish .songFour .cardImg {
+  width: 50%;
+  height: 50%;
+  transition: 0.5s;
+}
+
+.getPunishment .songPunish .songOne:hover .cardImg,
+.getPunishment .songPunish .songTwo:hover .cardImg,
+.getPunishment .songPunish .songThree:hover .cardImg,
+.getPunishment .songPunish .songFour:hover .cardImg {
+  filter: grayscale(0%);
+}
+
+.getPunishment .songPunish .songOne:hover,
+.getPunishment .songPunish .songTwo:hover,
+.getPunishment .songPunish .songThree:hover,
+.getPunishment .songPunish .songFour:hover {
+  background-color: rgb(255, 255, 255);
+  transform: scale3d(100%, 100%, 100%);
+}
+
+.getPunishment .textPunish {
+  margin-bottom: 5vh;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 8px;
+  color: rgb(10, 10, 10);
+  cursor: default;
+}
+
+.punishment {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(100, 100, 100);
+  z-index: 40000;
+}
+
+.punishment .punishContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 37.5%;
+  height: 85%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 30px;
+}
+
+.punishment .punishContent h2 {
+  margin: 30px 0 20px 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  cursor: default;
+}
+
+.punishment .punishContent .songLyrics {
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  cursor: default;
+  margin-right: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 80%;
+}
+
+.punishment .punishContent .songLyrics::-webkit-scrollbar {
+  background: none;
+}
+
+.punishment .punishContent .songPlayer {
+  display: flex;
+  flex-direction: row;
+}
+
+.punishment .punishContent .songPlayer h1 {
+  margin: 20px 60px 20px 60px;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.punishment .punishContent .songPlayer h1:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(10, 10, 10);
+}
+
+.punishment .quitPunish {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.punishment .quitPunish i {
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 50px;
+  color: rgb(50, 50, 50);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.punishment .quitPunish i:hover {
+  color: rgb(200, 200, 200);
+}
+
+@keyframes lightingOne {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgb(24, 20, 240), 0 0 10px rgb(255, 255, 255),
+      0 0 20px rgb(128, 255, 255);
+  }
+  25%,
+  75% {
+    text-shadow: 0 0 20px rgb(24, 20, 240), 0 0 20px rgb(255, 255, 255),
+      0 0 20px rgb(128, 255, 255);
+  }
+  50% {
+    text-shadow: 0 0 30px rgb(24, 20, 240), 0 0 30px rgb(255, 255, 255),
+      0 0 30px rgb(128, 255, 255);
+  }
+}
+
+@keyframes lightingTwo {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgb(13, 175, 26), 0 0 10px rgb(252, 255, 50),
+      0 0 10px rgb(225, 90, 0);
+  }
+  25%,
+  75% {
+    text-shadow: 0 0 20px rgb(13, 175, 26), 0 0 20px rgb(252, 255, 50),
+      0 0 20px rgb(225, 90, 0);
+  }
+  50% {
+    text-shadow: 0 0 30px rgb(13, 175, 26), 0 0 30px rgb(252, 255, 50),
+      0 0 30px rgb(225, 90, 0);
+  }
+}
+
+@keyframes lightingThree {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgb(240, 20, 20), 0 0 10px rgb(255, 255, 255),
+      0 0 10px rgb(228, 255, 110);
+  }
+  25%,
+  75% {
+    text-shadow: 0 0 20px rgb(240, 20, 20), 0 0 20px rgb(255, 255, 255),
+      0 0 20px rgb(228, 255, 110);
+  }
+  50% {
+    text-shadow: 0 0 30px rgb(240, 20, 20), 0 0 30px rgb(255, 255, 255),
+      0 0 30px rgb(228, 255, 110);
+  }
+}
+
+@keyframes lightingFour {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgb(240, 225, 20), 0 0 10px rgb(255, 255, 255),
+      0 0 10px rgb(255, 110, 243);
+  }
+  25%,
+  75% {
+    text-shadow: 0 0 20px rgb(240, 225, 20), 0 0 20px rgb(255, 255, 255),
+      0 0 20px rgb(255, 110, 243);
+  }
+  50% {
+    text-shadow: 0 0 30px rgb(240, 225, 20), 0 0 30px rgb(255, 255, 255),
+      0 0 30px rgb(255, 110, 243);
+  }
+}
